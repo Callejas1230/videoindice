@@ -1,0 +1,243 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #998c99;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #220727;
+    color: #fff;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #a800b8;
+}
+
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #1a1a1a;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+section h2 {
+    color: #0078d7;
+}
+
+.box {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #043964, #000);
+    border-radius: 8px;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.carousel-box {
+    padding: 1rem;
+    margin: 1rem 0;
+    background: linear-gradient(135deg, #043964, #000);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    color: #fff;
+}
+
+.carousel {
+    position: relative;
+    width: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    outline: none;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.input-container {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-container label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.styled-input {
+    width: 300px;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    background: linear-gradient(135deg, #992c01, #000000);
+    box-shadow: 0 0 10px rgba(45, 7, 151, 0.8);
+    transition: box-shadow 0.3s, transform 0.2s;
+}
+
+.styled-input:focus {
+    box-shadow: 0 0 20px rgba(255, 117, 140, 1);
+    transform: scale(1.05);
+}
+
+.register-btn {
+    margin-top: 1rem;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background: linear-gradient(135deg, #a800b8, #5d005f);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.register-btn:hover {
+    background: linear-gradient(135deg, #c91bde, #720087);
+    transform: scale(1.05);
+}
+/* Menú de navegación */
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Estilo de los enlaces en el menú */
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #a800b8;
+}
+
+/* Menú hamburguesa, oculto por defecto */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Menú de navegación en móviles oculto por defecto */
+    nav {
+        display: none;
+        flex-direction: column;
+        background-color: #220727;
+        width: 100%;
+        padding: 1rem;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1;
+    }
+
+    /* Mostrar el menú cuando se activa */
+    nav.active {
+        display: flex;
+    }
+
+    /* Mostrar el icono del menú en pantallas pequeñas */
+    .menu-icon {
+        display: block;
+    }
+
+    /* Estilo de los enlaces cuando el menú está activo */
+    nav a {
+        margin: 0.5rem 0;
+    }
+}
+/* Estilo para el banner de la imagen */
+.image-banner {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.image-banner img {
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Ajusta la altura máxima */
+    object-fit: cover; /* Mantiene la imagen proporcionada */
+}
+
